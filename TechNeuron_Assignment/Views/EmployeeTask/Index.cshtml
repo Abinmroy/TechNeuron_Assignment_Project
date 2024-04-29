@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EmployeeTask>
+
+@{
+	ViewData["Title"] = "Employee Task View";
+}
+
+<a asp-area="" asp-controller="EmployeeTask" asp-action="Create" class="text-white btn btn-success btn-sm mb-2"><i class="bi bi-plus-circle-fill"></i> Add New Task</a>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Task Name</th>
+			<th>Task Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var task in Model)
+		{
+			<tr>
+				<td>@task.TaskName</td>
+				<td>@task.TaskDescription</td>
+				<td><a asp-controller="EmployeeTask" asp-action="Update" class="btn btn-primary btn-sm" asp-route-id="@task.TaskID"><i class="bi bi-pencil-square"></i>Update</a></td>
+				<td><a asp-controller="EmployeeTask" asp-action="Delete" class="btn btn-danger btn-sm" asp-route-id="@task.TaskID"><i class="bi bi-trash-fill"></i>Delete</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

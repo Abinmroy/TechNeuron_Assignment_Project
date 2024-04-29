@@ -1,0 +1,9 @@
+﻿@model EmployeeTask
+
+@{
+	ViewData["Title"] = "Insert Employee Task";
+}
+
+<form asp-controller="EmployeeTask" asp-action="Create" method="post">
+	<partial name="_EmployeeTaskFormData" model="Model" />
+</form>

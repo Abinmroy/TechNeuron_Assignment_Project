@@ -1,0 +1,40 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+
+<div class="px-4 py-5 my-5 text-center">
+	<h1 class="display-5 fw-bold">TechNeuron</h1>
+	<h1 class="display-5 fw-bold">Employee Management System</h1>
+	<div class="col-lg-6 mx-auto">
+		<p class="lead mb-4">
+			Our Mission
+			To lead the business and economic world to a common digital platform - to plan, to perform, and to progress.
+		</p>
+	</div>
+</div>
+
+@* <div class="container p-1" style="position:center"> *@
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card" style="width:50%">
+				<div class="card-body">
+					<h5 class="card-title">Employees</h5>
+					<p class="card-text">Get employee details</p>
+					<a asp-controller="Employee" asp-action="Index" class="btn btn-dark">Click here!</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card" style="width:50%">
+				<div class="card-body">
+					<h5 class="card-title">Tasks</h5>
+					<p class="card-text">Get Task details</p>
+					<a asp-controller="EmployeeTask" asp-action="Index" class="btn btn-dark">Click here!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+@* </div>  *@
+
+

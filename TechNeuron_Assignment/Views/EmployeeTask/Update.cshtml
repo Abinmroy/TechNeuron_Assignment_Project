@@ -1,0 +1,11 @@
+﻿@model EmployeeTask
+
+@{
+	ViewData["Title"] = "Update Employee Task";
+}
+
+<form asp-controller="EmployeeTask" asp-action="Update" method="post">
+	<input asp-for="TaskID" hidden />
+	<partial name="_EmployeeTaskFormData" model="Model" />
+</form>
+

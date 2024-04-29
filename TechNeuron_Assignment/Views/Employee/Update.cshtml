@@ -1,0 +1,11 @@
+﻿@model Employee
+
+@{
+	ViewData["Title"] = "Update Employee";
+}
+
+<form asp-controller="Employee" asp-action="Update" method="post">
+	<input asp-for="EmployeeID" hidden />
+	<partial name="_EmployeeFormData" model="Model" />
+</form>
+
